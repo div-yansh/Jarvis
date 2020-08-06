@@ -89,12 +89,11 @@ def get_content_email():
 
 
 def send_email(to, content):
-	to = "dv6996@srmist.edu.in"
 	server = smtplib.SMTP("smtp.gmail.com", 574)
 	server.ehlo()
 	server.starttls()
-	server.login("divyansh0627@gmail.com", "hopeyourememberforgot")
-	server.sendmail("divyansh0627@gmail.com", to, content)
+	server.login("your mail id", "your mail password")
+	server.sendmail("your mail id", to, content)
 	speak("Main sent to " + to)
 	print("Main sent to " + to)
 	server.close()
